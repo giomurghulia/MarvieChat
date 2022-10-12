@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#22343C"
+    android:paddingTop="10dp">
+
+
+    <ImageView
+        android:id="@+id/icon_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/time_text"
+        app:layout_constraintStart_toEndOf="@id/icon_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Alice Smith"
+        android:paddingBottom="5dp"/>
+
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name_text"
+        app:layout_constraintTop_toTopOf="@id/name_text"
+        app:layout_constraintBottom_toBottomOf="@id/name_text"
+        tools:text="4:20 PM" />
+
+    <ImageView
+        android:id="@+id/message_type_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="@id/name_text"
+        app:layout_constraintEnd_toStartOf="@id/message_text"
+        app:layout_constraintTop_toTopOf="@id/message_text"
+        app:layout_constraintBottom_toBottomOf="@id/message_text"
+        />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/typing_image"
+        app:layout_constraintStart_toEndOf="@id/message_type_image"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        tools:text="Great. I will have a look" />
+
+    <ImageView
+        android:id="@+id/typing_image"
+        android:layout_width="20dp"
+        android:layout_height="5dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/message_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message_text"
+        app:layout_constraintTop_toTopOf="@id/message_text"
+        tools:src="@drawable/ic_typing" />
+
+    <TextView
+        android:id="@+id/unread_massage_text"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/shape_green_oval"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/message_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message_text"
+        app:layout_constraintTop_toTopOf="@id/message_text"
+        tools:text="99" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/name_text"
+        app:layout_constraintTop_toBottomOf="@id/icon_image" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
